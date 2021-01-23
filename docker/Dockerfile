@@ -16,11 +16,10 @@ ENV MILLIX_NODE_PASSWORD="millixpwd"
 ENV MILLIX_NODE_PORT=30000
 ENV MILLIX_NODE_PORT_API=5500
 ENV MILLIX_NODE_DATA_FOLDER="./data/"
-COPY run_node.sh run_node.sh
-RUN  chmod +x run_node.sh
+RUN  chmod +x run-millix-node.sh
 EXPOSE $MILLIX_NODE_PORT
 EXPOSE $MILLIX_NODE_PORT_API
 ENTRYPOINT [ "/bin/sh" ]
-CMD [ "run_node.sh" ]
+CMD [ "run-millix-node.sh" ]
 
 
